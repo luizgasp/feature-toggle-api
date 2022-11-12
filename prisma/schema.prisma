@@ -9,10 +9,10 @@ datasource db {
 
 model Features {
   id         String   @id @default(uuid())
+  name       String   @unique
   enabled    Boolean
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
-  name       String   @unique
 
   @@map("features")
 }
